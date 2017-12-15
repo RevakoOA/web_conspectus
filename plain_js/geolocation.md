@@ -9,6 +9,8 @@ You can access to all that you want to know: location, direction and speed.
 ```bash
 	navigator.geolocation.watchPosition((data)=>{
 		console.log(data);
+		arrow.style.transform = `rotate(${data.coords.direction}deg)`;
+		speed.innerText = data.coords.speed || '-'; // speed or if unavailable then '-'
     }, error => {
         console.err("Error!!!");
     }); // for continues looking
