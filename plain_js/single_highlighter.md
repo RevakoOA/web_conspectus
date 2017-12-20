@@ -26,8 +26,8 @@ For example, highlight text when the user is hover over the element.
 		const highlightBounding = {
 		    width: boundaries.width,
 			height: boundaries.height,
-			left: boundaries.left + window.scrollX,
-			top: boundaries.top + window.scrollY
+			left: boundaries.left + window.scrollX, // important thing
+			top: boundaries.top + window.scrollY // and here also, DO NOT forget to add window.scroll
 		};
 		
 		highlight.style.width = `${highlightBounding.width}px`;
