@@ -123,4 +123,43 @@
         onInputChange(e) {
             console.log(e.target.value);
         }
-    Now with Vanilla JS we can see everything we type and change in our console. 
+    Now with Vanilla JS we can see everything we type and change in our console. onChange - it's special property in React. More about that properties we can find in the documentation. target - it's the reference to the element from which we've got our Synthetic Event. Also we can do arrow function in our property:
+        <input onChange={e => console.log(e.target.value)}>
+17. Introduction to State.
+    State is one of the hardest topic in React. Each class has it's own State object. If state is changed render will be rerendered. To initial state we will add new method at the very top:
+        constructor(props) {
+            super(props);
+
+            this.state = {term: ''}
+        }
+    Functional components does not have any state. Only class-based components. All JS classes have special function constructor(). In reality this function is called all the time. The constructor is reserved for initializing state. super() - what's that? Reamember that we extend Component. Component itself has constructor function and if we call super() we get state from parent Component. If we dont's call super we will get an error. Whenever we use state we create new object with some properties. Whenever the user updates the search property. As user starts typing we will update our state.
+18. Each instance have it's own state. We have record our value to the state. Instead of console.log we will update our state. We really have to know how to manipulate the state. 
+         <input onChange={e => this.setState({
+             term: e.target.value
+         })} />
+    Now everytime we change value of our input we change the state of the component and that's why we call our render method again. 
+    !!!NEVER DO LIKE THAT: this.state.term = e.target.value
+    Always manipulate with this.setState
+    So, let's go ahead and refresh.
+    We will put our inout in the div
+        return (
+            <div>
+                <input onChange={e => this.setState({
+                term: e.target.value
+            })} />
+                Value of the input: {this.state.term}
+            <div />
+        )
+    Now everything we type is showing. 
+19. Controlled Components
+    Let's add value to the input.
+        <input
+            value={this.state.term} 
+            onChange={e => this.setState({
+                term: e.target.value
+            })} />
+    This.state causes re-rendering and it changes the value. That retrieves value, so initally it's an empty string. When user enter some text we update to the term and value of input has not actually change. So with writing value we also make value of input to be equal to the new value. Let's say we have some initial value of this.state.term, without value we will not see that there is some data.
+20. Breather and Review.
+    JSX, Components and State.
+    That's the most important topics in React.
+    It's near 8% of our Learning. In React there is very small API surface, so that means that understanding of this things allows us to do a lot if things.
