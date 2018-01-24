@@ -1,7 +1,12 @@
 Countdown Clock (Timer)
 =======================
+The main concepts of this lesson are:
+	Date.now()
+	new Date
+	timestamp
+	Learning how to convert miliseconds to h:m:s format
 
-We are going to create a timer. That's why we have to work with timer. To understand how to work with it we have to understand such thing as the timestamp which is time written in miliseconds from the 1 January 1970
+We are going to create a timer. That's why we have to work with time. To understand how to work with it we have to understand such thing as the timestamp which is time written in miliseconds from the 1 January 1970.
 
 To get time at this moment we can use:
 
@@ -18,7 +23,7 @@ function timer(seconds) {
 
 Then we get our setInterval function and there we have to stop it when variable secondsLeft is less than 0
 
-```
+```bash
 countdown = setInterval(() => {
 	const secondsLeft = Math.round((then - Date.now()) / 1000);
 	//check if we should stop it
@@ -33,6 +38,7 @@ countdown = setInterval(() => {
 function displayFunction(seconds) {
 	concole.log(seconds)	
 } // also we have to call this funciton as soon as th e function timer is invoked as we want to see our seconds value exactly when we reassign it.
+```
 
 So this is the main function of timer. Now we have to improve our displayFunction and also pass a seconds to the minutes. 
 
