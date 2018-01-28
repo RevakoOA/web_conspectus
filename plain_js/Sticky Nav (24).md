@@ -1,6 +1,6 @@
 Sticky Nav (24)
 
-So it's very easy to fo with jQuery, but we are learning JS, so we will do it with JS.
+So it's very easy to do with jQuery, but we are learning JS, so we will do it with JS.
 
 <script>
 	const nav = document.querySeletor('#main');
