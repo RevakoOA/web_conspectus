@@ -3,6 +3,7 @@ Drag to Scroll
 Actually this is a mouse event. If mousepressed and mousemoved we should scroll div horizontally. It's just a combination of the mouseleave, mouseup and other events
 We need to registrate if on how many pixels we moved our mouse on the X axis and also is moudepressed or not.
 
+```bash
 <script>
     const sloder = document.querySelecto('.items);
     let isDown = false;
@@ -36,3 +37,4 @@ We need to registrate if on how many pixels we moved our mouse on the X axis and
     });
     
 </script>
+```
