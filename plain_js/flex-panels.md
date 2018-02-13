@@ -10,7 +10,7 @@ Also we have to admit that container .panels and items .panel are all with displ
 
 To hide some content we can use transform: translateY(-100%). Also we use some :first-child and :last-child pseudo-selectors that selects children of some selector.
 
-To make our panel bigger we addEventListener('click', panel.classList.toggle('open'))
+To make our panel bigger we ```bash addEventListener('click', panel.classList.toggle('open'))```
 When our class added we change the flex value and also change the font-size. After that we do the translateY of children. We do that as it was mentioned before with the event 'transitionend'. This event is the same as 'click' or 'mousemove' event so we can easily use it.
 
 Conclusions: 1. Flex is really useful because it is responsive and we don't need to specify the width
